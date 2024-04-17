@@ -77,9 +77,14 @@ def run():
     #     datetime = timezone.now()
 
     # )
-    restaurant = Restaurant.objects.first()
+    # restaurant = Restaurant.objects.first()
+    # user = User.objects.first()
 
-    print(restaurant.sales.all())
-    pprint(connection.queries)
+    # rating = Rating.objects.create(user = user, restaurant = restaurant, rating = 9)
+    # rating.full_clean()
+    # rating.save()
+
+    # print(restaurant.rating.all())
+    # pprint(connection.queries)
 
 
