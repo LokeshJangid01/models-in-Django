@@ -26,7 +26,7 @@ class Restaurant(models.Model):
     restaurant_type = models.CharField(max_length = 2, choices = TypeChoices.choices)
 
     def __str__(self):
-        return self.name
+        return f'{self.name} is opened on {self.date_opened}'
     
 class Rating(models.Model):
     user = models.ForeignKey(User,on_delete = models.CASCADE)
