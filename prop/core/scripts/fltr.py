@@ -86,8 +86,17 @@ def run():
     # pprint(connection.queries)
 
 ##############              ORDER       ###############
-    res = Restaurant.objects.order_by('-name','date_opened')
+    # res = Restaurant.objects.order_by('-name','date_opened')[0:5]
     
-    pprint(res)
-    
+    # pprint(res)
+
+    ##############          FILTER WITH FOREIGN KEY         #########
+    rating = Rating.objects.filter(restaurant__name__startswith='C')
+    pprint(rating.count())
+
+    # rest = Rating.objects.filter()
+    # restaurant = Restaurant.objects.first()
+    # print(restaurant.rating.all())
+    rat = Restaurant.objects.filter()
+    pprint(rat)
     pprint(connection.queries)

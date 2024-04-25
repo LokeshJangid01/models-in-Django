@@ -6,11 +6,19 @@
     <title>Learning Model</title>
 </head>
 <body>
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-primary" type = 'submit'>Submit</button>
-    </form>
+    <!-- {% for res in restaurants %}
+        <p>{{res.name}}</p>
+        {% for rating in res.rating.all %}
+            <li>{{rating.rating}}</li>
+        {% endfor %}
+    {% endfor %} -->
+    {% for rating in ratings %}
+
+        
+        <p>{{rating.restaurant.name}} - {{rating.rating}}</p>
+
+        
+    {% endfor %}
     
 </body>
 </html>
